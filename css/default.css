@@ -88,3 +88,50 @@ button.active >span{
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
 }
+
+@keyframes letfhandRotate{
+    0%{ transform: rotate(25deg) }
+  50%{ transform: rotate(80deg) }
+  100%{ transform: rotate(25deg) }
+}
+@keyframes righthandRotate{
+    0%{ transform: rotate(-25deg) }
+  50%{ transform: rotate(-80deg) }
+  100%{ transform: rotate(-25deg) }
+}
+
+.kumamon.active::before{
+    animation: letfhandRotate 1s linear infinite;
+}
+.kumamon.active::after{
+    animation: righthandRotate 1s linear infinite;
+}
+.eye.active::before {
+    width:20px;
+    height:20px;
+    border:5px #0c0606 solid;
+    margin-top: 17px;
+    border-radius: 0;
+    background: transparent;
+}
+.eye.left.active::before{
+    border-left-color:transparent;
+    border-bottom-color:transparent;
+    transform:rotate(45deg);
+}
+.eye.right.active::before{
+    border-right-color:transparent;
+    border-bottom-color:transparent;
+    transform:rotate(-45deg);
+}
+.propagate{
+    display: none;
+    opacity: 0;
+}
+.propagate p{
+    font-size:18px;
+    font-weight:bold;
+    padding:20px;
+    border:2px #74AD08 solid;
+    border-radius:15px;
+}

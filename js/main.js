@@ -9,6 +9,7 @@ let result=`/* 我们来展示一下怎么用网页画一个熊本熊吧~ */
 }
 .wrapper{
     display: flex;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     flex-grow:1;
@@ -55,14 +56,18 @@ let result=`/* 我们来展示一下怎么用网页画一个熊本熊吧~ */
     background: #0c0606;
 }
 .kumamon::before {
-    left: 30px;
+    left: 50px;
+    transform-origin:center top;
     -webkit-transform: rotate(25deg);
             transform: rotate(25deg);
+    animation:none;
 }
 .kumamon::after {
-    right: 30px;
+    right: 50px;
+    transform-origin:center top;
     -webkit-transform: rotate(-25deg);
             transform: rotate(-25deg);
+    animation:none;
 }
 
 /* 画上圆圆的脸~ */
@@ -83,6 +88,7 @@ let result=`/* 我们来展示一下怎么用网页画一个熊本熊吧~ */
     top: 110px;
     display: inline-block;
     background: #ed2528;
+    z-index:2;
 }
 .face::before {
     left: -12px;
@@ -106,6 +112,7 @@ let result=`/* 我们来展示一下怎么用网页画一个熊本熊吧~ */
     display: inline-block;
 }
 .eye::before {
+    transition:none;
     width: 10px;
     height: 20px;
     border-radius: 4px / 10px;
@@ -168,7 +175,14 @@ let result=`/* 我们来展示一下怎么用网页画一个熊本熊吧~ */
     height: 30px;
     border-radius: 55px / 15px;
 }
-  
+/* 好了，大功告成！！~ */
+.circle{
+    transform:translateY(-30px);
+}
+.propagate{
+    display: block;
+    opacity: 1;
+}
 /* 至此，我们的熊本熊就画完啦~~ */
 /* 你以为这样就结束了吗？ */
 /* 摸摸熊本熊的头呗，熊本熊会和你互动一下滴！~ */
@@ -219,22 +233,25 @@ $('button[data-speed]').on('click',(buttonTarget)=>{
     }
 })
 if ('ontouchstart' in document.body) {
-    $('.head').on('click',()=>{
+    $('.kumamon').on('click',()=>{
         if (finishCreate) {
-            $('.hand.right').addClass('active Phone')
+            $('.kumamon').addClass('active')
+            $('.eye').addClass('active')
             $('.speaking').addClass('active Phone')
         }
     })
 } else {
-    $('.head').on('mouseenter',()=>{
+    $('.kumamon').on('mouseenter',()=>{
         if (finishCreate) {
-            $('.hand.right').addClass('active PC')
+            $('.kumamon').addClass('active')
+            $('.eye').addClass('active')
             $('.speaking').addClass('active PC')
         }
     })
-    $('.head').on('mouseleave',()=>{
+    $('.kumamon').on('mouseleave',()=>{
         if (finishCreate) {
-            $('.hand.right').removeClass('active PC')
+            $('.kumamon').removeClass('active')
+            $('.eye').removeClass('active')
             $('.speaking').removeClass('active PC')
         }
     })
