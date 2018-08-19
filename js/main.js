@@ -4,7 +4,7 @@ let result=`/* 我们来展示一下怎么用网页画一个熊本熊吧~ */
 /* 首先呢，先来一个背景色呗 */
 #code{
     padding:20px;
-    background:#FFC4E0;
+    background:white;
     font-family:Monaco;
 }
 .wrapper{
