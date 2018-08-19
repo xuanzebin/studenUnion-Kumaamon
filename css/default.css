@@ -128,6 +128,7 @@ button.active >span{
 .propagate{
     display: none;
     opacity: 0;
+    cursor: pointer;
 }
 .propagate p{
     font-size:18px;
@@ -145,19 +146,30 @@ button.active >span{
     top:0; height:0;
     width:100%;
     height:100%;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.8);
 }
 .QRCode{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    z-index:3;
 }
 .QRCode.Phone{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.QRCode.active{
+    display: flex;
+}
 .QRCode img{
     width:20%;
+}
+.QRCode svg{
+    position:absolute;
+    top:0;
+    right:0;
+    margin:30px;
+    cursor: pointer;
 }

@@ -258,5 +258,10 @@ if ('ontouchstart' in document.body) {
         }
     })
 }
-
+$('.propagate').on('click',()=>{
+    $('.QRCode').addClass('active')
+})
+$('.QRCode svg').on('click',()=>{
+    $('.QRCode').removeClass('active')
+})
 }.call()
