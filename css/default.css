@@ -133,12 +133,16 @@ button.active >span{
     margin-top:50px;
 }
 .propagate p{
+    display: none;
     font-size:18px;
     font-weight:bold;
     padding:20px;
     border:2px #74AD08 solid;
     border-radius:15px;
     background: white;
+}
+.propagate p.active{
+    display: block;
 }
 .propagate p::before{
     content:'';
@@ -159,8 +163,11 @@ button.active >span{
     left:50%;
     margin-left:4px;
 }
+.propagate .PCDescribe::after{
+    bottom:97%;
+}
 .propagate.Phone p{
-    font-size:50px;
+    font-size:45px;
 }
 .QRCode{
     position: absolute;

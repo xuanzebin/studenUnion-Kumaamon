@@ -239,6 +239,7 @@ if ('ontouchstart' in document.body) {
     $('.circle').addClass('Phone')
     $('.propagate').addClass('Phone')
     $('.QRCode').addClass('Phone')
+    $('.phoneDescribe').addClass('active')
     $('.kumamon').on('click',()=>{
         if (finishCreate) {
             $('.kumamon').addClass('active')
@@ -246,6 +247,7 @@ if ('ontouchstart' in document.body) {
         }
     })
 } else {
+    $('.PCDescribe').addClass('active')
     $('.kumamon').on('mouseenter',()=>{
         if (finishCreate) {
             $('.kumamon').addClass('active')
