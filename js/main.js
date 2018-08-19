@@ -148,8 +148,6 @@ let result=`/* 我们来展示一下怎么用网页画一个熊本熊吧~ */
     border-radius: 50%;
     position: absolute;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
     top: 100px;
     background: white;
     text-align: center;

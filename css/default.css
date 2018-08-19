@@ -84,3 +84,7 @@ button.active >span{
 .wrapper{
     background: linear-gradient(to bottom right, #40AB75 25%, #74AD08 50%, #ccc 50%, #eee 65%, #f5f5f5 85%, #fff 100%);
 }
+.mouth{
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
