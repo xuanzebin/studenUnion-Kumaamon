@@ -238,6 +238,7 @@ $('button[data-speed]').on('click',(buttonTarget)=>{
 if ('ontouchstart' in document.body) {
     $('.circle').addClass('Phone')
     $('.propagate').addClass('Phone')
+    $('.QRCode').addClass('Phone')
     $('.kumamon').on('click',()=>{
         if (finishCreate) {
             $('.kumamon').addClass('active')

@@ -129,6 +129,8 @@ button.active >span{
     display: none;
     opacity: 0;
     cursor: pointer;
+    position: relative;
+    margin-top:50px;
 }
 .propagate p{
     font-size:18px;
@@ -136,10 +138,29 @@ button.active >span{
     padding:20px;
     border:2px #74AD08 solid;
     border-radius:15px;
+    background: white;
+}
+.propagate p::before{
+    content:'';
+    display:block;
+    border:25px transparent solid;
+    border-bottom-color:#74AD08;
+    position:absolute;
+    bottom:100%;
+    left:50%;
+}
+.propagate p::after{
+    content:'';
+    display:block;
+    border:21px transparent solid;
+    border-bottom-color:white;
+    position:absolute;
+    bottom:98%;
+    left:50%;
+    margin-left:4px;
 }
 .propagate.Phone p{
     font-size:50px;
-    margin-top:150px;
 }
 .QRCode{
     position: absolute;
@@ -164,7 +185,7 @@ button.active >span{
     display: flex;
 }
 .QRCode img{
-    width:20%;
+    width:30%;
 }
 .QRCode svg{
     position:absolute;
@@ -172,4 +193,12 @@ button.active >span{
     right:0;
     margin:30px;
     cursor: pointer;
+}
+.QRCode span{
+    text-align: center;
+    font-size:40px;
+    color:black;
+    font-weight: bold;
+    line-height: 43px;
+    margin:200px 0;
 }
