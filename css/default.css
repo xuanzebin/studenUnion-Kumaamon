@@ -135,3 +135,7 @@ button.active >span{
     border:2px #74AD08 solid;
     border-radius:15px;
 }
+.propagate.Phone p{
+    font-size:50px;
+    margin-top:150px;
+}

@@ -39,6 +39,9 @@ let result=`/* 我们来展示一下怎么用网页画一个熊本熊吧~ */
     background: #EDEBE7;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
 }
+.circle.Phone{
+    margin-top:150px;
+}
 /* 先给熊本熊添加两个手臂吧~ */
 .kumamon {
     position: relative;
@@ -175,13 +178,13 @@ let result=`/* 我们来展示一下怎么用网页画一个熊本熊吧~ */
     height: 30px;
     border-radius: 55px / 15px;
 }
-/* 好了，大功告成！！~ */
-.circle{
-    transform:translateY(-30px);
-}
 .propagate{
     display: block;
     opacity: 1;
+}
+/* 好了，大功告成！！~ */
+.circle{
+    transform:translateY(-30px);
 }
 /* 至此，我们的熊本熊就画完啦~~ */
 /* 你以为这样就结束了吗？ */
@@ -233,11 +236,12 @@ $('button[data-speed]').on('click',(buttonTarget)=>{
     }
 })
 if ('ontouchstart' in document.body) {
+    $('.circle').addClass('Phone')
+    $('.propagate').addClass('Phone')
     $('.kumamon').on('click',()=>{
         if (finishCreate) {
             $('.kumamon').addClass('active')
             $('.eye').addClass('active')
-            $('.speaking').addClass('active Phone')
         }
     })
 } else {
@@ -245,14 +249,12 @@ if ('ontouchstart' in document.body) {
         if (finishCreate) {
             $('.kumamon').addClass('active')
             $('.eye').addClass('active')
-            $('.speaking').addClass('active PC')
         }
     })
     $('.kumamon').on('mouseleave',()=>{
         if (finishCreate) {
             $('.kumamon').removeClass('active')
             $('.eye').removeClass('active')
-            $('.speaking').removeClass('active PC')
         }
     })
 }
