@@ -1,6 +1,7 @@
 *{margin:0;padding:0;box-sizing:border-box; transition:all 1s;}
 *::before,*::after{box-sizing:border-box;transition:all 1s;}
 body{
+    position:relative;
     display:flex;
     flex-direction: column; 
     height:100vh;
@@ -138,4 +139,25 @@ button.active >span{
 .propagate.Phone p{
     font-size:50px;
     margin-top:150px;
+}
+.QRCode{
+    position: absolute;
+    top:0; height:0;
+    width:100%;
+    height:100%;
+    background: rgba(255,255,255,0.7);
+}
+.QRCode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.QRCode.Phone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.QRCode img{
+    width:400px;
 }
